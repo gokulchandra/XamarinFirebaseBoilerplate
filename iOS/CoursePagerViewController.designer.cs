@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Xamarin Studio from the outlets and
 // actions declared in your storyboard file.
@@ -11,11 +11,11 @@ using UIKit;
 
 namespace FirstApp.iOS
 {
-	[Register("CoursePagerViewController")]
-	partial class CoursePagerViewController
-	{
-		void ReleaseDesignerOutlets()
-		{
-		}
-	}
+    [Register ("CoursePagerViewController")]
+    partial class CoursePagerViewController
+    {
+        void ReleaseDesignerOutlets ()
+        {
+        }
+    }
 }

@@ -1,19 +1,23 @@
 ﻿using System;
-
+using FirstAppPCL;
 using UIKit;
 
 namespace FirstApp.iOS
 {
-	public partial class CategoryViewController : UIViewController
+	public partial class CategoryViewController : UITableViewController
 	{
-		public CategoryViewController() : base("CategoryViewController", null)
-		{
-		}
+		CourseCategoryManager courseCategoryManager;
 
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-			// Perform any additional setup after loading the view, typically from a nib.
+
+			Title = "Categories";
+
+			courseCategoryManager = new CourseCategoryManager();
+			UITableView tableView = this.View as UITableView;
+			tableView.Source = new CategoryViewSource(courseCategoryManager);
+
 		}
 
 		public override void DidReceiveMemoryWarning()
