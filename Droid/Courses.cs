@@ -16,11 +16,34 @@ namespace FirstApp.Droid
 	[Activity(Label = "Courses")]
 	public class Courses : Activity
 	{
+		void ButtonPrevious_Click(object sender, EventArgs e)
+		{
+			courseTitle.Text = "Prev Clicked!";
+		}
+
+		void ButtonNext_Click(object sender, EventArgs e)
+		{
+			courseTitle.Text = "Next Clicked!";
+		}
+
+		Button buttonPrevious;
+		Button buttonNext;
+		TextView courseTitle;
+		
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Create your application here
+			SetContentView(Resource.Layout.Courses);
+
+			buttonPrevious = FindViewById<Button>(Resource.Id.buttonPrevious);
+			buttonNext = FindViewById<Button>(Resource.Id.buttonNext);
+			courseTitle = FindViewById<TextView>(Resource.Id.courseTextView);
+
+			buttonPrevious.Click += ButtonPrevious_Click;
+			buttonNext.Click += ButtonNext_Click;
+		
+
 		}
 	}
 }

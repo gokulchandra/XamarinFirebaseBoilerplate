@@ -1,3 +1,51 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:gravity="bottom">
+    <Button
+        android:text="Previous"
+        android:layout_width="98.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonPrevious"
+        android:layout_marginLeft="0.0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+    <Button
+        android:text="Next"
+        android:layout_width="98.0dp"
+        android:layout_height="48.0dp"
+        android:id="@+id/buttonNext"
+        android:layout_marginLeft="0.0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/shirt_1"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:text="Default Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/courseTextView"
+        android:foregroundGravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_below="@id/imageView"
+        android:textSize="20dp" />
+    <TextView
+        android:text="Default Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/smallTextView"
+        android:foregroundGravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_below="@id/courseTextView" />
+</RelativeLayout>

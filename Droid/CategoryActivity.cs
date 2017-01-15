@@ -6,21 +6,47 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using FirstAppPCL;
+using Firebase.Provider;
 
 namespace FirstApp.Droid
 {
+	//[Activity(Label = "CategoryActivity", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	[Activity(Label = "CategoryActivity")]
-	public class CategoryActivity : Activity
+	public class CategoryActivity : ListActivity
 	{
+		CourseCategoryManager courseCategoryManager;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Create your application here
+			//Firebase.FirebaseApp.Instance.
+
+			courseCategoryManager = new CourseCategoryManager();
+
+			ListAdapter = new CourseCategoryManagerAdapter(
+				this,
+				Android.Resource.Layout.SimpleListItem1,
+				courseCategoryManager
+			);	
+		}
+
+		protected override void OnListItemClick(ListView l, View v, int position, long id)
+		{
+			Intent intent = new Intent(this, typeof(CourseActivity));
+
+			courseCategoryManager.MoveTo(position);
+
+			String courseTitle = courseCategoryManager.Current.Title;
+
+			intent.PutExtra(CourseActivity.DISPLAY_TITLE_INTENT_EXTRA, courseTitle);
+
+			StartActivity(intent);
 		}
 	}
 }
