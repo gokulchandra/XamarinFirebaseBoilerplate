@@ -1,18 +1,13 @@
 ﻿using System;
 namespace FirstAppPCL
 {
-	public class CourseCategory
+	public class Course
 	{
-		public CourseCategory()
-		{
-		}
-
 		public String Title { get; internal set; }
 		public String Description { get; internal set; }
-
-		public String ToString()
+		public String Image { get; internal set; }
+		public Course()
 		{
-			return this.Title;
 		}
 	}
 }
