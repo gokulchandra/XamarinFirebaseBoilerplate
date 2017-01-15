@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "460056232371",
+    "firebase_url": "https://xamarinfcbspike.firebaseio.com",
+    "project_id": "xamarinfcbspike",
+    "storage_bucket": "xamarinfcbspike.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460056232371:android:de3e0c47a135d32e",
+        "android_client_info": {
+          "package_name": "com.ajira.firstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460056232371-dorcrnpsqo7eiqrekiuu6jkpbj43l934.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
